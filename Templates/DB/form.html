@@ -1,5 +1,6 @@
 <form method ='post'>
 	<h1> Thi i QU form </h1>
 	{% csrf_token %}
-	{{ form.save_p }}
-	<button type='submit' > submi`t </button>
+	{{ form.as_p }}
+	<button type="submit">Submit</button>
+</form>
