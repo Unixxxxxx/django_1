@@ -14,9 +14,10 @@ def Db(request):
             name = form.cleaned_data["name"]
             age = form.cleaned_data['age']
             email = form.cleaned_data['email']
-            form.save()
-            return HttpResponse("The data is save in DB.")
-        else:
-            form = DbForm()
-    return render (request, 'DB/form.html',{'form': form})
+            form.save()  # Save the form's instance to the database
+            return HttpResponse("The data is saved in DB.")
+    else:
+        form = DbForm()  # This should only happen if it's not a POST request
+
+    return render(request, 'DB/form.html', {'form': form})
 
