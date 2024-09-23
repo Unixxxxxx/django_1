@@ -6,3 +6,6 @@ class Data(models.Model):
     Lname = models.CharField(max_length=50)
     Email = models.EmailField(unique=True)
 
+    def __str__(self):
+        return self.Name
+
