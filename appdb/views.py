@@ -21,3 +21,6 @@ def Db(request):
 
     return render(request, 'DB/form.html', {'form': form})
 
+def new(request):
+    return render(request, 'DB/new.htm')
+
